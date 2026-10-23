@@ -3,6 +3,7 @@ import html
 import os
 from io import BytesIO
 from pathlib import Path
+from textwrap import dedent
 
 import streamlit as st
 from dotenv import load_dotenv
@@ -510,13 +511,13 @@ if uploaded_files:
 
     is_indexed = st.session_state.indexed_fingerprint == current_fingerprint
     library_markup = [
-        f"""
+        dedent(f"""
         <section class="document-library" aria-label="Uploaded documents">
             <div class="document-library-heading">
                 <h3>Document library</h3>
                 <span>{len(uploaded_files)} PDF{"s" if len(uploaded_files) != 1 else ""}</span>
             </div>
-        """
+        """)
     ]
     for uploaded_file in uploaded_files:
         size_mb = uploaded_file.size / (1024 * 1024)
@@ -524,7 +525,7 @@ if uploaded_files:
         status = "Indexed" if is_indexed else "Ready to index"
         status_class = "is-indexed" if is_indexed else ""
         library_markup.append(
-            f"""
+            dedent(f"""
             <div class="document-row">
                 <div>
                     <div class="document-name">{filename}</div>
@@ -532,7 +533,7 @@ if uploaded_files:
                 </div>
                 <span class="document-status {status_class}">{status}</span>
             </div>
-            """
+            """)
         )
     library_markup.append(
         "</section><p class=\"document-meta\">To remove a PDF, use its remove control in the upload area, then index the updated selection.</p>"
