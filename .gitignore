@@ -1,0 +1,31 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local indexes, uploads, and source documents
+/chroma_db/
+/vector_store/
+/document_loaders/*.pdf
+/document_loaders/*.txt
+/document_loaders/test.py
+
+# Tooling and operating system files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+desktop.ini
