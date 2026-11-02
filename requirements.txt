@@ -1,0 +1,33 @@
+# RAG application dependencies - Groq API only
+# LLM provider: Groq (no OpenAI or Mistral integrations)
+
+# LangChain orchestration and integrations
+langchain
+langchain-core
+langchain-community
+langchain-text-splitters
+langchain-groq
+langchain-chroma
+langchain-huggingface
+
+# Vector database
+chromadb
+
+# Local embedding model (does not require OpenAI/Mistral API keys)
+sentence-transformers
+
+# Document loading (PDF support)
+pypdf
+
+# Environment variables, e.g. GROQ_API_KEY
+python-dotenv
+
+# Optional web interface; remove if you are not using Streamlit
+streamlit
+
+# Optional document support - uncomment if you load .docx files
+# docx2txt
+
+# Optional HTML/web-page loading - uncomment if your project loads webpages
+beautifulsoup4
+# requests

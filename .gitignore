@@ -1,0 +1,38 @@
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+.Python
+.venv/
+venv/
+env/
+
+# Local configuration and secrets
+.env
+.env.*
+!.env.example
+.streamlit/secrets.toml
+
+# Local indexes, uploads, and source documents
+/chroma_db/
+/vector_store/
+/document_loaders/*.pdf
+/document_loaders/*.txt
+/document_loaders/test.py
+
+# Local design drafts and exported screenshots
+/1.png
+/2.png
+/3.png
+/Untitled-2025-05-05-2135.excalidraw.png
+/*.excalidraw
+
+# Tooling and operating system files
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+.DS_Store
+Thumbs.db
+desktop.ini
